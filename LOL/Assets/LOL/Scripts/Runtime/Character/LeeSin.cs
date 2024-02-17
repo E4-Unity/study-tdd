@@ -14,12 +14,16 @@ namespace LOL
 
         /* 필드 */
         [SerializeField] Projectile m_SonicWave;
+        [SerializeField] GameObject m_SonicMark;
         [SerializeField] float m_ResonatingStrikeSpeed = 10f;
         [SerializeField] float m_ResonatingStrikeDistance = 0.3f; // 피격 판정을 위한 거리
         Collider m_Target; // 음파 표식이 새겨진 대상
 
         // 캐시
         WaitForFixedUpdate m_WaitForFixedUpdate;
+
+        // 음파 표식은 1 개만 존재할 수 있습니다.
+        GameObject m_SonicMarkInstance;
 
         /* 프로퍼티 */
         public Collider Target
@@ -30,11 +34,23 @@ namespace LOL
                 m_Target = value;
                 if (value is null)
                 {
-                    // TODO 대상에게 새겨진 표식을 지웁니다.
+                    // 대상에게 새겨진 표식을 회수합니다.
+                    if (m_SonicMarkInstance is not null)
+                    {
+                        m_SonicMarkInstance.transform.parent = transform;
+                        m_SonicMarkInstance.transform.localPosition = Vector3.zero;
+                        m_SonicMarkInstance.SetActive(false);
+                    }
                 }
                 else
                 {
-                    // TODO 대상에게 표식을 새깁니다.
+                    // 대상에게 표식을 새깁니다.
+                    if (m_SonicMarkInstance is not null)
+                    {
+                        m_SonicMarkInstance.transform.parent = value.transform;
+                        m_SonicMarkInstance.transform.localPosition = Vector3.zero;
+                        m_SonicMarkInstance.SetActive(true);
+                    }
                 }
             }
         }
@@ -75,6 +91,13 @@ namespace LOL
 
             // 캐싱
             m_WaitForFixedUpdate = new WaitForFixedUpdate();
+
+            // 음파 표식은 1 개만 존재할 수 있습니다.
+            if (m_SonicMark)
+            {
+                m_SonicMarkInstance = Instantiate(m_SonicMark);
+                m_SonicMarkInstance.SetActive(false);
+            }
         }
 
         /* 이벤트 함수 */
