@@ -1,0 +1,12 @@
+﻿{
+    "name": "com.eu4ng.ability-system",
+    "displayName": "Ability System",
+    "version": "0.1.0",
+    "unity": "2022.3",
+    "author": {
+        "name": "Eu4ng",
+        "email": "eu4ng97@gmail.com",
+        "url": "https://github.com/Eu4ng"
+    },
+    "description": "스킬 구현을 위한 시스템"
+}

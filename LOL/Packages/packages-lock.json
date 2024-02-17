@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.eu4ng.ability-system": {
+      "version": "file:AbilitySystem",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.burst": {
       "version": "1.8.9",
       "depth": 1,
