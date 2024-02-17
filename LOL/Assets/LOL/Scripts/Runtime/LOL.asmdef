@@ -1,7 +1,9 @@
 {
     "name": "LOL",
     "rootNamespace": "LOL",
-    "references": [],
+    "references": [
+        "GUID:bccf9d6f2c2e8fb46aee669d91ff54ac"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
