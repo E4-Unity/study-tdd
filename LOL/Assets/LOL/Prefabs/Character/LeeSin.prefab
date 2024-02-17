@@ -82,6 +82,8 @@ MonoBehaviour:
   m_SonicWaveSpawnPosition: {fileID: 6176504786983285567}
   m_SonicWave: {fileID: 4239783628715003009, guid: 1fe61b37c60c71340898ad6c77b4d564,
     type: 3}
+  m_ResonatingStrikeSpeed: 10
+  m_ResonatingStrikeDistance: 1.5
 --- !u!54 &4694168415578323883
 Rigidbody:
   m_ObjectHideFlags: 0

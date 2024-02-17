@@ -20,8 +20,7 @@ namespace LOL
         bool m_Hit;
 
         /* 이벤트 */
-        public event Action<Collider> OnHit; // 충돌 시 호출
-        public event Action OnHitFailed; // 충돌 없이 파괴된 경우에만 호출
+        public event Action<Projectile, Collider> OnHit; // this, other
 
         /* MonoBehaviour */
         void Awake()
@@ -45,7 +44,7 @@ namespace LOL
         void OnDisable()
         {
             // 충돌 실패 이벤트 호출
-            if (!m_Hit) OnHitFailed?.Invoke();
+            if (!m_Hit) OnHit?.Invoke(this, null);
         }
 
         void FixedUpdate()
@@ -61,8 +60,11 @@ namespace LOL
 
         void OnTriggerEnter(Collider other)
         {
+            // 캐릭터인 경우에만 충돌 이벤트 처리
+            if (other.GetComponent<Character>() is null) return;
+
             // 충돌 이벤트 호출
-            OnHit?.Invoke(other);
+            OnHit?.Invoke(this, other);
 
             if (m_HitEffect)
             {
