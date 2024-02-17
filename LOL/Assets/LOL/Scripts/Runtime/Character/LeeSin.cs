@@ -22,10 +22,10 @@ namespace LOL
         WaitForFixedUpdate m_WaitForFixedUpdate;
 
         /* 프로퍼티 */
-        Collider Target
+        public Collider Target
         {
             get => m_Target;
-            set
+            private set
             {
                 m_Target = value;
                 if (value is null)
@@ -76,25 +76,6 @@ namespace LOL
             // 캐싱
             m_WaitForFixedUpdate = new WaitForFixedUpdate();
         }
-
-        // TODO 테스트 코드 시작
-        void Start()
-        {
-            SonicWave();
-        }
-
-        bool m_Wait;
-
-        void Update()
-        {
-            if (!m_Wait && Target is not null)
-            {
-                m_Wait = true;
-                SonicWave();
-            }
-        }
-
-        // TODO 테스트 코드 끝
 
         /* 이벤트 함수 */
         // LeeSinAnimator
