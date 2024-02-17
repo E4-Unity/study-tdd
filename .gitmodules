@@ -1,0 +1,3 @@
+[submodule "LOL/Assets/LOL/AssetCollections"]
+	path = LOL/Assets/LOL/AssetCollections
+	url = https://github.com/E4-Unity/study-tdd-asset-collections.git
