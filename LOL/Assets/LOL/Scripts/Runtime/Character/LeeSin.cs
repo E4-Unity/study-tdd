@@ -13,7 +13,7 @@ namespace LOL
         LeeSinAnimator m_CharacterAnimator;
 
         /* 필드 */
-        [SerializeField] Projectile m_SonicWave;
+        [SerializeField] ProjectileBase m_SonicWave;
         [SerializeField] GameObject m_SonicMark;
         [SerializeField] float m_ResonatingStrikeSpeed = 10f;
         [SerializeField] float m_ResonatingStrikeDistance = 0.3f; // 피격 판정을 위한 거리
@@ -105,7 +105,7 @@ namespace LOL
         void OnSpawnEnergyBall_Event() => SpawnSonicWave();
 
         // Projectile
-        void OnHit_Event(Projectile projectile, Collider other)
+        void OnHit_Event(ProjectileBase projectile, Collider other)
         {
             // 층덜 이벤트 언바인딩
             projectile.OnHit -= OnHit_Event;
@@ -131,7 +131,7 @@ namespace LOL
         {
             // TODO 오브젝트 풀링
             // SonicWave 스폰
-            Projectile sonicWave = Instantiate(m_SonicWave, m_SonicWaveSpawnPosition.position, Quaternion.LookRotation(GetTransform().forward));
+            var sonicWave = Instantiate(m_SonicWave, m_SonicWaveSpawnPosition.position, Quaternion.LookRotation(GetTransform().forward));
 
             // 충돌 이벤트 바인딩
             sonicWave.OnHit += OnHit_Event;

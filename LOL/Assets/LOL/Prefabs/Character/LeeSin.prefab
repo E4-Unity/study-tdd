@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SonicWaveSpawnPosition: {fileID: 6176504786983285567}
-  m_SonicWave: {fileID: 4239783628715003009, guid: 1fe61b37c60c71340898ad6c77b4d564,
+  m_SonicWave: {fileID: 2309419013434313313, guid: 1fe61b37c60c71340898ad6c77b4d564,
     type: 3}
   m_SonicMark: {fileID: 4932088507883938021, guid: 1beb78c0bc560dc46aee754ad13b60bf,
     type: 3}
