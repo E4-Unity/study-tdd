@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LOL/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ab36efd76d7264e4e90ef7f4462f3929,
+      type: 2}

@@ -2,7 +2,9 @@
     "name": "LOL",
     "rootNamespace": "LOL",
     "references": [
-        "GUID:bccf9d6f2c2e8fb46aee669d91ff54ac"
+        "GUID:bccf9d6f2c2e8fb46aee669d91ff54ac",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:84651a3751eca9349aac36a66bba901b"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
