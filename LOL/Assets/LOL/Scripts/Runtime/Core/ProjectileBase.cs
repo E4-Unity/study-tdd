@@ -43,6 +43,9 @@ namespace LOL
         {
             // 충돌 실패 이벤트 호출
             if (!m_Hit) OnHit?.Invoke(this, null);
+
+            // 모든 이벤트 언바인딩
+            OnHit = null;
         }
 
         protected virtual void FixedUpdate()

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fe27d799e175a4a981e731552685f2, type: 3}
+  m_Name: GA_SonicWave
+  m_EditorClassIdentifier: 
+  m_ID: 0
+  m_CoolTime: 0
+  m_Costs: []
+  m_SonicWave:
+    m_SonicWave: {fileID: 2309419013434313313, guid: 1fe61b37c60c71340898ad6c77b4d564,
+      type: 3}
+    m_AnimationMontage: {fileID: -203655887218126122, guid: a1fa609cd2576f7428e47611bb430fc9,
+      type: 3}
+    m_AnimationSpeed: 2
+  m_ResonatingStrike:
+    m_SonicMark: {fileID: 4984980826245493072, guid: 1beb78c0bc560dc46aee754ad13b60bf,
+      type: 3}
+    m_ResonatingStrikeSpeed: 10
+    m_ResonatingStrikeDistance: 1.5
+    m_AnimationMontage: {fileID: -203655887218126122, guid: 364f32e2debe4b941a38f3d7f1c7ecbf,
+      type: 3}
+    m_AnimationSpeed: 1
