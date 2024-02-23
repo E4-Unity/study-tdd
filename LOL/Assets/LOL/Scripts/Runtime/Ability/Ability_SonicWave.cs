@@ -171,6 +171,9 @@ namespace LOL
 
                 // 애니메이션 재생 재개
                 owner.AbilityAnimator.ResumeAnimation();
+
+                // 물리 활성화
+                character.SetPhysics(true);
             }
 
             Transform GetOrCreateSonicMark(AbilityManagerBase owner)
